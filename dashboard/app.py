@@ -80,3 +80,14 @@ selected_category = st.sidebar.selectbox(
 
 if selected_category != "All":
     df = df[df["Category"] == selected_category]
+
+st.subheader("Dataset Preview")
+
+st.dataframe(df.head(20))
+
+st.download_button(
+    label="Download Data",
+    data=df.to_csv(index=False),
+    file_name="RetailPulse_Data.csv",
+    mime="text/csv"
+)
