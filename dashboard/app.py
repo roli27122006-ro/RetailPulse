@@ -91,3 +91,9 @@ st.download_button(
     file_name="RetailPulse_Data.csv",
     mime="text/csv"
 )
+
+st.subheader("Sales by Region")
+
+region_sales = df.groupby("Region")["Sales"].sum()
+
+st.bar_chart(region_sales)

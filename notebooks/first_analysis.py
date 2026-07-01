@@ -113,3 +113,9 @@ plt.xlabel("Region")
 plt.ylabel("Sales")
 
 plt.show()
+
+print("\nSales by Region:")
+print(df.groupby("Region")["Sales"].sum())
+
+print("\nSales by Region:")
+print(df.groupby("Region")["Sales"].sum())
